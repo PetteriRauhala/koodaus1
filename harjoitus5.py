@@ -18,7 +18,7 @@ class Auto:
         #         X % Y palauttaa arvon joka jää yli kun X jaetaan Y:llä
         #         (jos X jaettuna Y:llä menee tasan, niin jakojäännös on 0)  
 
-        vuosi = f" -{self.vuosi % 100}" if self.vuosi is not None else ""
+        vuosi = f" -{self.vuosi % 100:02d}" if self.vuosi is not None else ""
         return f"Auto: {self.merkki} {self.malli}{vuosi} ({self.rekisterinumero})"
 
 
