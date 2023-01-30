@@ -14,6 +14,9 @@ class Auto:
         #  Huom   Terniärioperaattori
         #          A if EHTo else B
         #        Valitsee arvon A jos EHTO on tosi, muuten arvon B
+        #  Huom2. % = jakojäännös-operaattori
+        #         X % Y palauttaa arvon joka jää yli kun X jaetaan Y:llä
+        #         (jos X jaettuna Y:llä menee tasan, niin jakojäännös on 0)  
 
         vuosi = f" -{self.vuosi % 100}" if self.vuosi is not None else ""
         return f"Auto: {self.merkki} {self.malli}{vuosi} ({self.rekisterinumero})"
@@ -21,7 +24,7 @@ class Auto:
 
 vw = Auto("VW", "Kupla", "AKU-313")
 opel = Auto("Opel", "Kadet", "ABC-123")
-volvo = Auto("Volvo", "240", "CBA-321")
+volvo = Auto("Volvo", "850", "CBA-321")
 
 # Atribuutteja voi asettaa myös luokan ulkopuolella
 vw.vuosi = 1992
